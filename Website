@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flushy Fantasy | High-Capacity Engineering-Grade Sanitation – Kenya</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #0D7A6E;
+    --teal-dark: #085A52;
+    --gold: #C9993A;
+    --gold-light: #E8B84B;
+    --cream: #F7F2EA;
+    --dark: #0E1C1A;
+    --white: #FFFFFF;
+    --gray-light: #F4F7F6;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--dark); line-height: 1.6; }
+  
+  /* --- NAVIGATION --- */
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 1000;
+    background: rgba(14, 28, 26, 0.95); backdrop-filter: blur(10px);
+    padding: 15px 5%; display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid rgba(201, 153, 58, 0.2);
+  }
+  .logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--white); text-decoration: none; font-weight: 900; }
+  .logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 30px; list-style: none; }
+  .nav-links a { color: var(--white); text-decoration: none; font-size: 0.9rem; font-weight: 500; transition: 0.3s; }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta { background: var(--gold); padding: 10px 20px; border-radius: 4px; color: var(--dark) !important; font-weight: 700; }
+
+  /* --- HERO SECTION --- */
+  .hero {
+    height: 90vh; background: linear-gradient(rgba(14, 28, 26, 0.8), rgba(14, 28, 26, 0.8)), url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&q=80&w=1600') center/cover;
+    display: flex; align-items: center; justify-content: center; text-align: center; color: var(--white); padding: 0 5%;
+  }
+  .hero-content h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 6vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; }
+  .hero-content p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 30px; opacity: 0.9; }
+  .btn-main { background: var(--gold); color: var(--dark); padding: 15px 40px; text-decoration: none; font-weight: 700; border-radius: 4px; transition: 0.3s; font-size: 1.1rem; }
+  .btn-main:hover { background: var(--gold-light); transform: translateY(-3px); }
+
+  /* --- PRODUCT GRID (ENGINEERING SPECS) --- */
+  .products { padding: 100px 5%; background: var(--white); }
+  .section-title { text-align: center; margin-bottom: 60px; }
+  .section-title h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; }
+  .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+  .product-card { background: var(--gray-light); border-radius: 12px; overflow: hidden; border: 1px solid #e0e0e0; transition: 0.3s; }
+  .product-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+  .product-header { background: var(--teal); color: var(--white); padding: 30px; text-align: center; }
+  .product-header h3 { font-size: 1.5rem; margin-bottom: 5px; }
+  .product-body { padding: 30px; }
+  .spec-list { list-style: none; margin-bottom: 20px; }
+  .spec-list li { margin-bottom: 10px; display: flex; align-items: center; gap: 10px; font-size: 0.95rem; }
+  .spec-list li::before { content: "✓"; color: var(--teal); font-weight: bold; }
+  .price-tag { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--teal-dark); font-weight: 900; }
+
+  /* --- TECHNICAL ADVANTAGE --- */
+  .tech-specs { background: var(--dark); color: var(--white); padding: 100px 5%; }
+  .tech-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; max-width: 1200px; margin: 0 auto; }
+  .tech-info h2 { font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 20px; color: var(--gold); }
+  .tech-card { background: rgba(255,255,255,0.05); padding: 25px; border-radius: 8px; border-left: 4px solid var(--gold); margin-bottom: 20px; }
+  .tech-card h4 { margin-bottom: 10px; color: var(--gold-light); }
+
+  /* --- FOOTER --- */
+  footer { background: var(--dark); color: rgba(255,255,255,0.6); padding: 60px 5% 20px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); }
+  .footer-logo { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.8rem; margin-bottom: 20px; display: block; }
+  
+  @media (max-width: 768px) { .tech-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="logo">Flushy <span>Fantasy</span></a>
+  <ul class="nav-links">
+    <li><a href="#fleet">Our Fleet</a></li>
+    <li><a href="#engineering">Engineering</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#booking" class="nav-cta">Get Quote</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Structural Integrity meets <em>Luxury</em> Sanitation</h1>
+    <p>Premium container conversions engineered for Kenya's largest events. Durable, hygienic, and ready for deployment nationwide.</p>
+    <a href="#fleet" class="btn-main">Explore the Fleet</a>
+  </div>
+</section>
+
+<section class="products" id="fleet">
+  <div class="section-title">
+    <h2>Our Precision-Engineered Fleet</h2>
+    <p>Purpose-built container conversions designed for high-density usage.</p>
+  </div>
+  <div class="product-grid">
+    <!-- 20ft 12-Toilet Block -->
+    <div class="product-card">
+      <div class="product-header">
+        <h3>20ft High-Density Block</h3>
+        <p>Optimized for Weddings & Events</p>
+      </div>
+      <div class="product-body">
+        <ul class="spec-list">
+          <li><strong>12 Individual Cubicles</strong></li>
+          <li>2mm Checkered MS Steel Floor</li>
+          <li>1-Meter Integrated Belly Tank</li>
+          <li>Premium PVC Interior Partitions</li>
+          <li>Dual Hand-Wash Stations</li>
+        </ul>
+        <div class="price-tag">KSh 35,000 <small>/ Day</small></div>
+        <p style="margin-top:15px; font-size:0.85rem; color:#666;">*Monthly site rental available at KSh 18,000</p>
+      </div>
+    </div>
+
+    <!-- 40ft Mega Complex -->
+    <div class="product-card">
+      <div class="product-header" style="background: var(--dark);">
+        <h3>40ft Mega-Event Complex</h3>
+        <p>Built for Festivals & Graduations</p>
+      </div>
+      <div class="product-body">
+        <ul class="spec-list">
+          <li><strong>26 - 30 Individual Cubicles</strong></li>
+          <li>High-Traffic Load Bearing Structure</li>
+          <li>Dual-Side Entry/Exit Logic</li>
+          <li>Extended Waste Storage Capacity</li>
+          <li>Full-Time On-Site Technical Staff</li>
+        </ul>
+        <div class="price-tag">KSh 120,000 <small>/ Day</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tech-specs" id="engineering">
+  <div class="tech-grid">
+    <div class="tech-info">
+      <h2>The Flushy Fantasy <br>Engineering Advantage</h2>
+      <p>We don't just provide toilets; we provide mobile infrastructure. Every unit is fabricated to survive heavy usage while maintaining a 5-star aesthetic.</p>
+    </div>
+    <div>
+      <div class="tech-card">
+        <h4>Industrial Floor Plating</h4>
+        <p>Equipped with 2mm checkered MS steel plates. Non-slip, easy-to-sanitize, and impervious to moisture damage.</p>
+      </div>
+      <div class="tech-card">
+        <h4>Self-Sufficient Waste Management</h4>
+        <p>Our custom 1-meter belly tanks allow for thousands of uses without needing immediate external drainage, making us perfect for remote sites.</p>
+      </div>
+      <div class="tech-card">
+        <h4>Modular Fabrication</h4>
+        <p>Built from ISO-standard shipping containers, offering superior wind-resistance and structural safety for large gatherings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">Flushy <span>Fantasy</span></span>
+  <p>© 2026 Flushy Fantasy Limited. Engineered in Nairobi, Kenya.</p>
+</footer>
+
+</body>
+</html>
